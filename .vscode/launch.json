@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Chrome",
+            "port": 9876,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${C:\Users\muham\Documents\Prosum}"
+        }
+
+    ],
+    "compounds": []
+}
