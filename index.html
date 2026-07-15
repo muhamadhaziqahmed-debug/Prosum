@@ -1,145 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prosum.com</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body>
     <div class="utility-bar">
+      <div class="logo">PROSUM</div>
 
-    <div class="logo">PROSUM</div>
+      <div class="utility-right">
+        <div class="outline-box">
+          <input type="text" placeholder="" />
+          <button class="btn-blue">Search</button>
+        </div>
 
-    <div class="utility-right">
+        <div class="outline-box">
+          <button class="btn-blue">Login</button>
+          <a href="signup.html" class="signup-link">Sign Up</a>
+        </div>
 
-      <div class="outline-box">
-        <input type="text" placeholder="">
-        <button class="btn-blue">Search</button>
+        <div class="outline-box">
+          <span class="cart-icon"><i class="fa-sharp fa-solid fa-cart-shopping"></i></span>
+          <a href="#" class="cart-link">View Cart: Items(0)</a>
+        </div>
       </div>
+    </div>
 
-      <div class="outline-box">
-        <button class="btn-blue">Login</button>
-        <a href="#" class="signup-link">Sign Up</a>
+    <div class="navbar">
+      <a href="#" class="active">Home</a>
+      <div class="dropdown">
+        <a href="#" class="has-arrow">Services</a>
+        <div class="dropdown-content">
+          <a href="#">Lorem</a>
+          <a href="#">ipsum</a>
+          <a href="#">dolor</a>
+          <a href="#">sit</a>
+        </div>
       </div>
-
-      
-      <div class="outline-box">
-        <span class="cart-icon"><i class="fa-sharp fa-solid fa-cart-shopping"></i></span>
-        <a href="#" class="cart-link">View Cart: Items(0)</a>
+      <div class="dropdown">
+        <a href="#" class="has-arrow">Products</a>
+        <div class="dropdown-content">
+          <a href="#">amet</a>
+          <a href="#">consectetur</a>
+          <a href="#">adipisicing</a>
+          <a href="#">elit</a>
+        </div>
       </div>
-
-    </div>
-  </div>
-
-  <div class="navbar">
-    <a href="#" class="active">Home</a>
-    <div class="dropdown">
-    <a href="#" class="has-arrow">Services</a>
-    <div class="dropdown-content">
-        <a href="#">Lorem</a>
-        <a href="#">ipsum</a>
-        <a href="#">dolor</a>
-        <a href="#">sit</a>
-    </div>
-    </div>
-    <div class="dropdown">
-    <a href="#" class="has-arrow">Products</a>
-    <div class="dropdown-content">
-        <a href="#">amet</a>
-        <a href="#">consectetur</a>
-        <a href="#">adipisicing</a>
-        <a href="#">elit</a>
-    </div>
-    </div>
-    <div class="dropdown">
-    <a href="#" class="has-arrow">About Us</a>
-    <div class="dropdown-content">
-        <a href="#">Quam</a>
-        <a href="#">nisi</a>
-        <a href="#">sint</a>
-        <a href="#">rem</a>
-    </div>
-    </div>
-    <a href="#">Contact</a>
-  </div>
-
-  <div class="hero-with-image">
-    <div class="banner-text">
-       <h4>Entrust PROSUM For Managed <br> Services</h4>
-       <h5>Absolute Support Assurance</h5>
-       <a class="Learn-more" href="#">Learn More</a>
-  </div>   
-  </div>
-  
-  <div class="news-bar">
-      <div class="icon">
-         💬
+      <div class="dropdown">
+        <a href="#" class="has-arrow">About Us</a>
+        <div class="dropdown-content">
+          <a href="#">Quam</a>
+          <a href="#">nisi</a>
+          <a href="#">sint</a>
+          <a href="#">rem</a>
+        </div>
       </div>
+      <a href="#">Contact</a>
+    </div>
 
-      <div class="title">
-        Latest News:
+    <div class="hero-with-image">
+      <div class="banner-text">
+        <h4>
+          Entrust PROSUM For Managed <br />
+          Services
+        </h4>
+        <h5>Absolute Support Assurance</h5>
+        <a class="Learn-more" href="#">Learn More</a>
       </div>
+    </div>
 
-      <div class="news" id="news">
-        
-      </div>
+    <div class="news-bar">
+      <div class="icon">💬</div>
+
+      <div class="title">Latest News:</div>
+
+      <div class="news" id="news"></div>
 
       <div class="button">
         <button onclick="previousNews()">&lt;</button>
         <button onclick="nextNews()">&gt;</button>
       </div>
+    </div>
+    <div class="quick-links">
+      <div class="help-desk-support">
+        <span>
+          <h2>Help Desk Support</h2>
+          <p>
+            Business & Business Plus <br />
+            customer support
+          </p>
+          <a href="#" class="request-btn">Request Support</a>
+        </span>
+      </div>
 
-  </div>
-<div class="quick-links">
-  <div class="help-desk-support">
-    <span>
-       <h2>Help Desk Support</h2>
-       <p>Business & Business Plus <br> customer support</p>
-       <a href="#" class="request-btn">Request Support</a>
-    </span>
-  </div>
+      <div class="business-solutions-for-you">
+        <h2>
+          Business Solutions<br />
+          For You
+        </h2>
+        <p>Get to know our products</p>
+        <a href="#" class="learn-btn">Learn More</a>
+      </div>
 
-  <div class="business-solutions-for-you">
-     <h2>Business Solutions<br> For You</h2>
-     <p>Get to know our products</p>
-     <a href="#" class="learn-btn">Learn More</a>
-  </div>
+      <div class="order-online">
+        <h2>Online Order</h2>
+        <p>
+          Shop with us for all your<br />
+          ICT needs.
+        </p>
+        <a href="#" class="login-btn-quick-links">Login</a>
+      </div>
+    </div>
 
-  <div class="order-online">
-     <h2>Online Order</h2>
-     <p>Shop with us for all your<br> ICT needs.</p>
-     <a href="#" class="login-btn-quick-links">Login</a>
-  </div>
-</div>
-  
-<footer>
-
-    <div class="bar">
-
+    <footer>
+      <div class="bar">
         <div class="sitemap">
-            <a href="#">
-                <i class="fa-solid fa-square-plus"></i>
-                Sitemap
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-square-plus"></i>
+            Sitemap
+          </a>
         </div>
 
         <div class="social-icons">
-            <a href="#" class="linkedin"></a>
-            <a href="#" class="twitter"></a>
-            <a href="#" class="facebook"></a>
+          <a href="#" class="linkedin"></a>
+          <a href="#" class="twitter"></a>
+          <a href="#" class="facebook"></a>
         </div>
-
-    </div>
-</footer>
+      </div>
+    </footer>
     <div class="lower-footer">
-        <a href="#" class="footer-last">Terms and Conditions  |</a>
-        <a href="#" class="footer-last">Shipping & Returns</a>
+      <a href="#" class="footer-last">Terms and Conditions |</a>
+      <a href="#" class="footer-last">Shipping & Returns</a>
     </div>
 
-
-   <script src="script.js"></script>
-</body>
+    <script src="JS/script.js"></script>
+  </body>
 </html>
