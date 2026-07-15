@@ -15,7 +15,7 @@
     align-content: center;
     background: #f4f4f4;
     accent-color: #2c7be5;
-    height: 100vh;
+    height: 100%;
 }
 
 .welcome {
@@ -64,6 +64,7 @@
     align-items: center;
     padding: 30px;
     align-content: start;
+    margin-bottom: 50px;
 }
 
 
