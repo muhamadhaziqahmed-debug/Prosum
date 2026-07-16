@@ -4,33 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accounts</title>
-    <link rel="stylesheet" href="CSS/signin-style.css" />
+    <link rel="stylesheet" href="CSS/signup-style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   </head>
   <body>
     <div class="logo">PROSUM</div>
-    <div class="container">
-      <main>
-        <section class="welcome">
-          <p>Prosum Login</p>
-          <h2>Welcome Back!</h2>
-        </section>
-        <section class="main">
-          <h2 class="welcome-title">Welcome Back</h2>
-          <p class="welcome-subtitle">Sign in to continue</p>
-          <label for="user-email">Email Address</label>
-          <input type="email" id="user-email" name="email" placeholder="someone@domain" required /><br />
-          <label for="user-password">Password</label>
-          <input type="password" id="user-password" name="password" placeholder="Enter a password...." required /><br />
-          <div class="rememberpassword">
-            <div class="remember">
-              <input type="checkbox" id="remember" />
-              <label id="remember-mee" for="remember">Remember me</label>
-            </div>
-            <a class="forgot-password" href="forgot-password.html">Forgot password?</a>
-          </div>
-          <button class="login">Log in</button>
-          or
+    <div class="card">
+      <section class="welcome">
+        <h2 class="welcome-title">Welcome To Prosum !</h2>
+        <p class="welcome-subtitle">Create your account for free.</p>
+      </section>
+      <section class="create-account">
+        <label for="user-name">Enter your name</label>
+        <div class="names">
+          <input type="text" id="user-name" placeholder="First Name" required />
+          <input type="text" id="user-name" placeholder="Last Name(Optional)" />
+        </div>
+        <label for="user-email">Enter Your Email</label>
+        <input type="email" id="user-email" placeholder="someone@domain" required /><br />
+
+        <label for="user-password">Enter a password</label>
+        <input type="password" id="user-password" placeholder="Password..." reauired /><br />
+
+        <label for="user-password">Conform Password</label>
+        <input type="password" id="user-password-conform" placeholder="Password..." reauired /><br />
+        <button class="submit">Submit</button>
+        <p>OR</p>
+        <div class="social-links">
           <button class="continue-with-google" href="#">
             <svg
               style="height: 30px"
@@ -62,16 +62,11 @@
             </svg>
             continue with google
           </button>
-          <p class="signup-text">
-            Don't have an account?
-            <a href="Sign-up.html">Sign Up</a>
-            <br />
-            <br />
-            OR, go to home
-            <a href="index.html">Home</a>
-          </p>
-        </section>
-      </main>
+        </div>
+        <p>or</p>
+        <p class="signup-text">Already have an account<a href="login.html">Login</a></p>
+        <p class="signup-text">Go to home<a href="index.html">Login</a></p>
+      </section>
     </div>
   </body>
 </html>

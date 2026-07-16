@@ -10,15 +10,8 @@
     scroll-behavior: smooth;
 }
 
-.logo {
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 500;
-    color: var(--color-primary);
-    letter-spacing: -3px;
-}
-
-.container {
-    padding-top: 30px;
+body {
+    padding: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -26,6 +19,13 @@
     background: #f4f4f4;
     accent-color: #2c7be5;
     height: 100%;
+}
+
+.logo {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 500;
+    color: var(--color-primary);
+    letter-spacing: -3px;
 }
 
 .welcome {
@@ -63,10 +63,10 @@
     margin-bottom: 35px;
 }
 
-.main {
+.card {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    width: 370px;
     padding: 35px;
     background: white;
     border-radius: 8px;
@@ -77,52 +77,52 @@
     margin-bottom: 50px;
 }
 
-
-label {
-    font-size: 13px;
-    display: inline-block;
-    margin-bottom: 7px;
-    align-self: flex-start;
-    margin-left: 20px;
-}
-
-#user-password,
-#user-email {
+#user-name {
     height: 40px;
     border-radius: 6px;
     border: 1px solid #ddd;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
     background-color: #fff;
-    width: 90%;
+    width: 48%;
     padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
-.rememberpassword {
-    margin-top: 20px;
+label {
+    margin: auto;
+}
+
+.names {
     display: flex;
-    font-size: 13px;
+    align-items: center;
     justify-content: space-between;
+    align-content: center;
 }
 
-.rememberpassword a {
-    font-size: 13px;
-    text-decoration: none;
-    margin-left: 30px;
-    color: black;
+#user-password,
+#user-email,
+#user-password-conform {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    width: 99%;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
-.rememberpassword a:hover {
-    color: #abcdef;
+#user-password-conform {
+    margin-bottom: 10px
 }
 
-.rememberpassword label {
-    font-size: 13px;
+p {
+    text-align: center;
 }
 
-
-
-.login {
-    width: 90%;
+.submit {
+    width: 99%;
     height: 48px;
     font-size: 18px;
     font-weight: 500;
@@ -134,12 +134,10 @@ label {
     border: none;
 }
 
-
-
 .continue-with-google {
     border: none;
     border-radius: 7px;
-    width: 90%;
+    width: 99%;
     height: 48px;
     font-size: 18px;
     font-weight: 500;
@@ -149,8 +147,6 @@ label {
     background: linear-gradient(#4da3ff, #1f6fd0);
     color: white;
 }
-
-
 
 .signup-text {
     margin-top: 20px;
@@ -184,10 +180,4 @@ button {
 button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-#remember-mee {
-    margin-left: 0px;
-    gap: 0;
-    margin-bottom: 3px;
 }
