@@ -102,7 +102,7 @@ label {
 
 #user-password,
 #user-email,
-#user-password-conform {
+#user-password-confirm {
     height: 40px;
     border-radius: 6px;
     border: 1px solid #ddd;
@@ -113,7 +113,7 @@ label {
     margin-bottom: 20px;
 }
 
-#user-password-conform {
+#user-password-confirm {
     margin-bottom: 10px
 }
 
