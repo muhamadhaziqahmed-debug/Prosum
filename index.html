@@ -8,123 +8,141 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   </head>
   <body>
-    <div class="utility-bar">
-      <div class="logo">PROSUM</div>
-
-      <div class="utility-right">
-        <div class="outline-box">
-          <input type="text" placeholder="" />
-          <button class="btn-blue">Search</button>
-        </div>
-
-        <div class="outline-box">
-          <a href="login.html" class="btn-blue">Login</a>
-          <a href="signup.html" class="signup-link">Sign Up</a>
-        </div>
-
-        <div class="outline-box">
-          <span class="cart-icon"><i class="fa-sharp fa-solid fa-cart-shopping"></i></span>
-          <a href="#" class="cart-link">View Cart: Items(0)</a>
-        </div>
-        <button class="menu-btn">
-          <i class="fa-solid fa-bars"></i>
+    <header>
+      <div class="utility-bar">
+        <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNavbar">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-      </div>
-    </div>
 
-    <div class="navbar">
-      <a href="#" class="active">Home</a>
-      <div class="dropdown">
-        <a href="#" class="has-arrow">Services</a>
-        <div class="dropdown-content">
+        <div class="logo">PROSUM</div>
+
+        <div class="utility-right">
+          <div class="outline-box search-box">
+            <input type="text" placeholder="Search" />
+            <button class="btn-blue">Search</button>
+          </div>
+
+          <div class="outline-box login-box">
+            <a href="login.html" class="btn-blue">Login</a>
+            <a href="signup.html" class="signup-link">Sign Up</a>
+          </div>
+
+          <div class="outline-box cart-box">
+            <span class="cart-icon"><i class="fa-sharp fa-solid fa-cart-shopping"></i></span>
+            <a href="#" class="cart-link">View Cart: Items(0)</a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <div class="dropdown">
+          <a href="#" class="has-arrow">Services</a>
+          <div class="dropdown-content">
+            <a href="#">Lorem</a>
+            <a href="#">ipsum</a>
+            <a href="#">dolor</a>
+            <a href="#">sit</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="has-arrow">Products</a>
+          <div class="dropdown-content">
+            <a href="#">amet</a>
+            <a href="#">consectetur</a>
+            <a href="#">adipisicing</a>
+            <a href="#">elit</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="has-arrow">About Us</a>
+          <div class="dropdown-content">
+            <a href="#">Quam</a>
+            <a href="#">nisi</a>
+            <a href="#">sint</a>
+            <a href="#">rem</a>
+          </div>
+        </div>
+        <a href="#">Contact</a>
+      </nav>
+
+      <nav class="mobile-navbar" id="mobileNavbar">
+        <a href="#" class="active">Home</a>
+
+        <details class="mobile-dropdown">
+          <summary>Services</summary>
           <a href="#">Lorem</a>
           <a href="#">ipsum</a>
           <a href="#">dolor</a>
           <a href="#">sit</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="#" class="has-arrow">Products</a>
-        <div class="dropdown-content">
+        </details>
+
+        <details class="mobile-dropdown">
+          <summary>Products</summary>
           <a href="#">amet</a>
           <a href="#">consectetur</a>
           <a href="#">adipisicing</a>
           <a href="#">elit</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="#" class="has-arrow">About Us</a>
-        <div class="dropdown-content">
+        </details>
+
+        <details class="mobile-dropdown">
+          <summary>About Us</summary>
           <a href="#">Quam</a>
           <a href="#">nisi</a>
           <a href="#">sint</a>
           <a href="#">rem</a>
+        </details>
+
+        <a href="#">Contact</a>
+
+        <hr class="mobile-navbar-divider" />
+
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero-with-image">
+        <div class="banner-text">
+          <h4>Entrust PROSUM For Managed <br />Services</h4>
+          <h5>Absolute Support Assurance</h5>
+          <a href="#">Learn More</a>
         </div>
       </div>
-      <a href="#">Contact</a>
-    </div>
-    <nav class="mobile-navbar">
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Products</a>
-      <a href="#">About Us</a>
-      <a href="#">Contact</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign Up</a>
-    </nav>
-    <div class="hero-with-image">
-      <div class="banner-text">
-        <h4>
-          Entrust PROSUM For Managed <br />
-          Services
-        </h4>
-        <h5>Absolute Support Assurance</h5>
-        <a class="Learn-more" href="#">Learn More</a>
+
+      <div class="news-bar">
+        <div class="icon">💬</div>
+        <div class="title">Latest News:</div>
+        <div class="news" id="news"></div>
+        <div class="button">
+          <button onclick="previousNews()" aria-label="Previous news item">&lt;</button>
+          <button onclick="nextNews()" aria-label="Next news item">&gt;</button>
+        </div>
       </div>
-    </div>
 
-    <div class="news-bar">
-      <div class="icon">💬</div>
-
-      <div class="title">Latest News:</div>
-
-      <div class="news" id="news"></div>
-
-      <div class="button">
-        <button onclick="previousNews()">&lt;</button>
-        <button onclick="nextNews()">&gt;</button>
-      </div>
-    </div>
-    <div class="quick-links">
-      <div class="help-desk-support">
-        <span>
+      <div class="quick-links">
+        <div class="help-desk-support">
           <h2>Help Desk Support</h2>
-          <p>
-            Business & Business Plus <br />
-            customer support
-          </p>
-          <a href="#" class="request-btn">Request Support</a>
-        </span>
-      </div>
+          <p>Business & Business Plus <br />customer support</p>
+          <a href="#" class="card-cta request-btn">Request Support</a>
+        </div>
 
-      <div class="business-solutions-for-you">
-        <h2>
-          Business Solutions<br />
-          For You
-        </h2>
-        <p>Get to know our products</p>
-        <a href="#" class="learn-btn">Learn More</a>
-      </div>
+        <div class="business-solutions-for-you">
+          <h2>Business Solutions<br />For You</h2>
+          <p>Get to know our products</p>
+          <a href="#" class="card-cta learn-btn">Learn More</a>
+        </div>
 
-      <div class="order-online">
-        <h2>Online Order</h2>
-        <p>
-          Shop with us for all your<br />
-          ICT needs.
-        </p>
-        <a href="#" class="login-btn-quick-links">Login</a>
+        <div class="order-online">
+          <h2>Online Order</h2>
+          <p>Shop with us for all your<br />ICT needs.</p>
+          <a href="#" class="card-cta login-btn-quick-links">Login</a>
+        </div>
       </div>
-    </div>
+    </main>
 
     <footer>
       <div class="bar">
@@ -136,16 +154,17 @@
         </div>
 
         <div class="social-icons">
-          <a href="#" class="linkedin"></a>
-          <a href="#" class="twitter"></a>
-          <a href="#" class="facebook"></a>
+          <a href="#" class="linkedin" aria-label="LinkedIn"></a>
+          <a href="#" class="twitter" aria-label="Twitter"></a>
+          <a href="#" class="facebook" aria-label="Facebook"></a>
         </div>
       </div>
+
+      <div class="lower-footer">
+        <a href="#">Terms and Conditions |</a>
+        <a href="#">Shipping & Returns</a>
+      </div>
     </footer>
-    <div class="lower-footer">
-      <a href="#" class="footer-last">Terms and Conditions |</a>
-      <a href="#" class="footer-last">Shipping & Returns</a>
-    </div>
 
     <script src="JS/script.js"></script>
   </body>
