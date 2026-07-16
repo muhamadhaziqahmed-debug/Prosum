@@ -71,26 +71,24 @@
       </section>
     </div>
     <script>
-      const password = document.getElementById('password');
-      const confirmPassword = document.getElementById('confirm-password');
-      const error = document.getElementById('password-error');
-      confirmPassword.addEventListener('input', () => {
-        if (password.value !== confirmPassword.value) {
-          error.textContent = 'Passwords do not match';
-        } else {
-          error.textContent = '';
-        }
+      /* ---------- Password match validation ---------- */
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirm-password');
+      const passwordError = document.getElementById('password-error');
+
+      confirmPasswordInput.addEventListener('input', () => {
+        passwordError.textContent =
+          passwordInput.value !== confirmPasswordInput.value ? 'Passwords do not match' : '';
       });
 
-      const passwordInput = document.getElementById('password');
-      const confirmInput = document.getElementById('confirm-password');
+      /* ---------- Show / hide password toggle ---------- */
       const toggleButton = document.getElementById('togglePassword');
 
       toggleButton.addEventListener('click', function () {
         const isPassword = passwordInput.type === 'password';
 
         passwordInput.type = isPassword ? 'text' : 'password';
-        confirmInput.type = isPassword ? 'text' : 'password';
+        confirmPasswordInput.type = isPassword ? 'text' : 'password';
 
         this.textContent = isPassword ? 'Hide' : 'Show';
       });

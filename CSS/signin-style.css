@@ -1,7 +1,13 @@
+/* =============================================================
+   VARIABLES
+   ============================================================= */
 :root {
     --color-primary: #0077cc;
 }
 
+/* =============================================================
+   RESET
+   ============================================================= */
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +16,9 @@
     scroll-behavior: smooth;
 }
 
-.logo {
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 500;
-    color: var(--color-primary);
-    letter-spacing: -3px;
-}
-
+/* =============================================================
+   LAYOUT
+   ============================================================= */
 .container {
     padding-top: 30px;
     display: flex;
@@ -26,6 +28,29 @@
     background: #f4f4f4;
     accent-color: #2c7be5;
     height: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+    align-items: center;
+    align-content: start;
+    margin-bottom: 50px;
+}
+
+/* =============================================================
+   COMPONENTS
+   ============================================================= */
+.logo {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 500;
+    color: var(--color-primary);
+    letter-spacing: -3px;
 }
 
 .welcome {
@@ -63,21 +88,6 @@
     margin-bottom: 35px;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    width: 360px;
-    padding: 35px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
-    align-items: center;
-    padding: 30px;
-    align-content: start;
-    margin-bottom: 50px;
-}
-
-
 label {
     font-size: 13px;
     display: inline-block;
@@ -104,6 +114,10 @@ label {
     justify-content: space-between;
 }
 
+.rememberpassword label {
+    font-size: 13px;
+}
+
 .rememberpassword a {
     font-size: 13px;
     text-decoration: none;
@@ -115,42 +129,44 @@ label {
     color: #abcdef;
 }
 
-.rememberpassword label {
-    font-size: 13px;
+#remember-mee {
+    margin-left: 0px;
+    gap: 0;
+    margin-bottom: 3px;
 }
 
-
-
-.login {
+.login,
+.continue-with-google {
     width: 90%;
     height: 48px;
     font-size: 18px;
     font-weight: 500;
-    word-spacing: 3px;
+    border: none;
+    border-radius: 9px;
     background: linear-gradient(#4da3ff, #1f6fd0);
     color: white;
-    margin: 15px 0px 15px 0px;
-    border-radius: 9px;
-    border: none;
 }
 
-
+.login {
+    word-spacing: 3px;
+    margin: 15px 0px 15px 0px;
+}
 
 .continue-with-google {
-    border: none;
     border-radius: 7px;
-    width: 90%;
-    height: 48px;
-    font-size: 18px;
-    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#4da3ff, #1f6fd0);
-    color: white;
 }
 
+button {
+    transition: all 0.2s ease;
+}
 
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
 
 .signup-text {
     margin-top: 20px;
@@ -170,24 +186,4 @@ label {
 .signup-text a:hover {
     color: #5e455e;
     text-decoration: underline;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    transition: 0.2s;
-}
-
-button {
-    transition: all 0.2s ease;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-#remember-mee {
-    margin-left: 0px;
-    gap: 0;
-    margin-bottom: 3px;
 }

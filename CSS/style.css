@@ -1,3 +1,6 @@
+/* =============================================================
+   VARIABLES
+   ============================================================= */
 :root {
     --color-primary: #0077cc;
     --color-primary-dark: #1a6dbf;
@@ -30,6 +33,9 @@
     --transition-medium: 0.35s ease;
 }
 
+/* =============================================================
+   RESET
+   ============================================================= */
 * {
     margin: 0;
     padding: 0;
@@ -44,8 +50,9 @@ body {
     overflow-x: hidden;
 }
 
-/* ---------- Utility bar ---------- */
-
+/* =============================================================
+   LAYOUT - Utility bar (logo, search, login, cart)
+   ============================================================= */
 .utility-bar {
     background: #fff;
     padding: 8px 15px;
@@ -75,6 +82,9 @@ body {
     row-gap: 8px;
 }
 
+/* =============================================================
+   COMPONENTS - Outline boxes (search / login / cart), buttons
+   ============================================================= */
 .outline-box {
     display: flex;
     align-items: center;
@@ -137,7 +147,7 @@ body {
     font-size: 14px;
 }
 
-/* Hamburger button (visible below 690px, see media query) */
+/* Hamburger button (shown only below 690px, see Responsive section) */
 .menu-btn {
     display: none;
     flex-direction: column;
@@ -172,8 +182,9 @@ body {
     transform: translateY(-8.5px) rotate(-45deg);
 }
 
-/* ---------- Desktop navbar ---------- */
-
+/* =============================================================
+   COMPONENTS - Desktop navbar + dropdowns
+   ============================================================= */
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -236,8 +247,9 @@ body {
     display: flex;
 }
 
-/* ---------- Mobile navbar (hamburger panel) ---------- */
-
+/* =============================================================
+   COMPONENTS - Mobile navbar (hamburger slide-down panel)
+   ============================================================= */
 .mobile-navbar {
     position: absolute;
     top: 0;
@@ -310,8 +322,9 @@ body {
     border-bottom: none;
 }
 
-/* ---------- Hero ---------- */
-
+/* =============================================================
+   COMPONENTS - Hero banner
+   ============================================================= */
 .hero-with-image {
     height: clamp(220px, 30vw, 400px);
     margin: 13px;
@@ -356,8 +369,9 @@ body {
     text-decoration: none;
 }
 
-/* ---------- News bar ---------- */
-
+/* =============================================================
+   COMPONENTS - News ticker bar
+   ============================================================= */
 .news-bar {
     display: flex;
     flex-wrap: wrap;
@@ -396,8 +410,9 @@ body {
     height: 25px;
 }
 
-/* ---------- Quick links cards ---------- */
-
+/* =============================================================
+   COMPONENTS - Quick links cards
+   ============================================================= */
 .quick-links {
     display: flex;
     flex-wrap: wrap;
@@ -419,21 +434,17 @@ body {
     border-radius: var(--radius-lg);
 }
 
+/* Only the background image differs between the three cards -
+   height/width/etc. are already set by the shared rule above. */
 .help-desk-support {
     background-image: url(../Images/support.jpg);
-    height: 260px;
-    width: 30%;
 }
 
 .business-solutions-for-you {
     background-image: url(../Images/Business.png);
-    height: 260px;
-    width: 30%;
 }
 
 .order-online {
-    height: 260px;
-    width: 30%;
     background-image: url(../Images/online.png);
 }
 
@@ -490,8 +501,9 @@ body {
     top: clamp(60px, 13vw, 140px);
 }
 
-/* ---------- Footer ---------- */
-
+/* =============================================================
+   COMPONENTS - Footer
+   ============================================================= */
 .bar {
     display: flex;
     flex-wrap: wrap;
@@ -576,7 +588,9 @@ body {
     color: var(--color-text-footer-hover);
 }
 
-/* ================= Responsive breakpoints ================= */
+/* =============================================================
+   RESPONSIVE
+   ============================================================= */
 
 /* Large desktop screens: enlarge quick-link cards */
 @media (min-width: 1367px) {

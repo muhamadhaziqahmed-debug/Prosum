@@ -1,27 +1,33 @@
-// ---------- News ticker ----------
+/* =============================================================
+   NEWS TICKER
+   ============================================================= */
 const news = [
   'PRISM LLP are proud to announce their recent ISO certification.',
   'Welcome to our brand new website.',
   'Check out our latest products and services.',
   'Thank you for visiting our company.',
 ];
-let current = 0;
+
+let currentNewsIndex = 0;
 const newsText = document.getElementById('news');
-newsText.textContent = news[current];
+newsText.textContent = news[currentNewsIndex];
 
 function nextNews() {
-  current = (current + 1) % news.length;
-  newsText.textContent = news[current];
+  currentNewsIndex = (currentNewsIndex + 1) % news.length;
+  newsText.textContent = news[currentNewsIndex];
 }
 
 function previousNews() {
-  current = (current - 1 + news.length) % news.length;
-  newsText.textContent = news[current];
+  currentNewsIndex = (currentNewsIndex - 1 + news.length) % news.length;
+  newsText.textContent = news[currentNewsIndex];
 }
 
-// ---------- Hamburger menu ----------
+/* =============================================================
+   HAMBURGER MENU
+   ============================================================= */
 const menuBtn = document.querySelector('.menu-btn');
 const mobileNavbar = document.querySelector('.mobile-navbar');
+const MOBILE_BREAKPOINT = 690;
 
 function closeMenu() {
   menuBtn.classList.remove('active');
@@ -47,7 +53,7 @@ mobileNavbar.querySelectorAll('a').forEach((link) => {
 
 // Close the menu if the viewport is resized back to desktop width.
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 690) {
+  if (window.innerWidth > MOBILE_BREAKPOINT) {
     closeMenu();
   }
 });

@@ -23,17 +23,13 @@
     </div>
 
     <script>
-      document.getElementById('verify-btn').addEventListener('click', () => {
-        window.location.href = 'reset-password.html';
-      });
       const verifyBtn = document.getElementById('verify-btn');
+      const otpInputs = document.querySelectorAll('.otp-boxes input');
 
+      /* ---------- Verify button: validate OTP length before redirecting ---------- */
       verifyBtn.addEventListener('click', () => {
-        const inputs = document.querySelectorAll('.otp-boxes input');
-
         let otp = '';
-
-        inputs.forEach((input) => {
+        otpInputs.forEach((input) => {
           otp += input.value;
         });
 
@@ -44,8 +40,8 @@
 
         window.location.href = 'reset-password.html';
       });
-      const otpInputs = document.querySelectorAll('.otp-boxes input');
 
+      /* ---------- OTP boxes: digits only, auto-advance, backspace, enter-to-submit ---------- */
       otpInputs.forEach((input, index) => {
         input.addEventListener('input', (e) => {
           const value = e.target.value;
@@ -64,27 +60,10 @@
           if (e.key === 'Backspace' && !input.value && index > 0) {
             otpInputs[index - 1].focus();
           }
-        });
-      });
-      otpInputs.forEach((input, index) => {
-        input.addEventListener('input', (e) => {
-          const value = e.target.value;
-
-          e.target.value = value.replace(/[^0-9]/g, '').slice(0, 1);
-
-          if (e.target.value && index < otpInputs.length - 1) {
-            otpInputs[index + 1].focus();
-          }
-        });
-
-        input.addEventListener('keydown', (e) => {
-          if (e.key === 'Backspace' && !input.value && index > 0) {
-            otpInputs[index - 1].focus();
-          }
 
           // Submit on Enter
           if (e.key === 'Enter') {
-            document.getElementById('verify-btn').click();
+            verifyBtn.click();
           }
         });
       });
