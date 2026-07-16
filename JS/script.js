@@ -57,3 +57,28 @@ window.addEventListener('resize', () => {
     closeMenu();
   }
 });
+console.log(`
+🥂🎆🥳🎇
+
+
+═══════════════════════════════════════
+ The Great tooglePassword War of 2026
+ Casualties:
+   - 1 keyboard
+   - Several brain cells
+   - JavaScript's reputation
+
+ Outcome:
+   Haziq: Victory ✅
+   JavaScript: Still confusing ❌
+═══════════════════════════════════════
+
+Project survived the cleanup.
+Signed:
+- Haziq
+- Claude
+- Browser error recovery
+- Chatgpt (Hugeee thanks to him)!!!!
+- Dated: 16-july-2026
+- Dont forget you was once here
+`);
