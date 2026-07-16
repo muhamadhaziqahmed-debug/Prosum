@@ -50,6 +50,7 @@ body {
     border-radius: 7px;
 }
 
+
 .outline-box input[type="text"] {
     border: none;
     background: #fff;
@@ -110,14 +111,6 @@ body {
 }
 
 
-/* .navbar {
-      background: #29aaed;
-      padding: 5px 10px;
-      display: flex;
-      align-items: center;
-      height: 50px;
-      justify-content: space-around
-    } */
 
 .navbar {
     min-height: 50px;
@@ -625,10 +618,28 @@ body {
     }
 }
 
+@media (max-width: 688px) {
+    .logo {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .utility-bar {
+        flex-direction: row;
+        height: auto;
+    }
+
+
+
+    .outline-box {
+        display: none;
+    }
+}
 
 /* Landscape phones / short-viewport devices: vh-based card heights collapse
    too far and can force buttons past the bottom edge, so pin to fixed values. */
 @media (max-height: 500px) and (max-width: 900px) {
+
 
     .hero-with-image {
         height: 220px;
@@ -669,17 +680,14 @@ body {
     }
 
     .utility-bar {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
     }
 
-    .utility-right {
-        flex-direction: column;
-        width: 100%;
-    }
+
 
     .outline-box {
-        width: 100%;
+        display: none;
     }
 
     .outline-box input {
@@ -771,4 +779,40 @@ body {
     width: 30%;
     background-size: cover;
     background-position: center;
+}
+
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-navbar {
+    display: none;
+    flex-direction: column;
+    background: #4169E1;
+}
+
+.mobile-navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-navbar.active {
+    display: flex;
+}
+
+@media (max-width:688px) {
+    .navbar {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
 }
