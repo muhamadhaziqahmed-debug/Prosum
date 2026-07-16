@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OTP Sent</title>
+    <link rel="stylesheet" href="CSS/auth-pages.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="icon">📧</div>
+      <h1>OTP Sent</h1>
+      <p>We have sent a verification code to your email address.</p>
+      <p class="small">Redirecting to verification page...</p>
+    </div>
+
+    <script>
+      setTimeout(() => {
+        window.location.href = 'verify-otp.html';
+      }, 3000);
+    </script>
+  </body>
+</html>
