@@ -77,7 +77,8 @@ body {
     margin-bottom: 50px;
 }
 
-#user-name {
+#first-name,
+#last-name {
     height: 40px;
     border-radius: 6px;
     border: 1px solid #ddd;
@@ -100,9 +101,9 @@ label {
     align-content: center;
 }
 
-#user-password,
+#password,
 #user-email,
-#user-password-confirm {
+#confirm-password {
     height: 40px;
     border-radius: 6px;
     border: 1px solid #ddd;
@@ -111,6 +112,12 @@ label {
     width: 99%;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+#password-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 #user-password-confirm {

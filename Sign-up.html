@@ -17,18 +17,20 @@
       <section class="create-account">
         <label for="user-name">Enter your name</label>
         <div class="names">
-          <input type="text" id="user-name" placeholder="First Name" required />
-          <input type="text" id="user-name" placeholder="Last Name(Optional)" />
+          <input type="text" id="first-name" placeholder="First Name" required />
+          <input type="text" id="last-name" placeholder="Last Name(Optional)" />
         </div>
         <label for="user-email">Enter Your Email</label>
         <input type="email" id="user-email" placeholder="someone@domain" required /><br />
 
-        <label for="user-password">Enter a password</label>
-        <input type="password" id="user-password" placeholder="Password..." reauired /><br />
+        <label for="user-password">Enter a password</label><br />
+        <button type="button" id="togglePassword" style="background-color: #fff; border: none">Show</button>
+        <input type="password" id="password" placeholder="Password..." required /><br />
 
         <label for="user-password">Confirm Password</label>
-        <input type="password" id="user-password-confirm" placeholder="Password..." reauired /><br />
-        <button class="submit">Submit</button>
+        <input type="password" id="confirm-password" placeholder="Password..." required /><br />
+        <p id="password-error"></p>
+        <button class="submit">Create Account</button>
         <p>OR</p>
         <div class="social-links">
           <button class="continue-with-google" href="#">
@@ -68,5 +70,30 @@
         <p class="signup-text">Go to home<a href="index.html">Home</a></p>
       </section>
     </div>
+    <script>
+      const password = document.getElementById('password');
+      const confirmPassword = document.getElementById('confirm-password');
+      const error = document.getElementById('password-error');
+      confirmPassword.addEventListener('input', () => {
+        if (password.value !== confirmPassword.value) {
+          error.textContent = 'Passwords do not match';
+        } else {
+          error.textContent = '';
+        }
+      });
+
+      const passwordInput = document.getElementById('password');
+      const confirmInput = document.getElementById('confirm-password');
+      const toggleButton = document.getElementById('togglePassword');
+
+      toggleButton.addEventListener('click', function () {
+        const isPassword = passwordInput.type === 'password';
+
+        passwordInput.type = isPassword ? 'text' : 'password';
+        confirmInput.type = isPassword ? 'text' : 'password';
+
+        this.textContent = isPassword ? 'Hide' : 'Show';
+      });
+    </script>
   </body>
 </html>
